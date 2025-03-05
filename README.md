@@ -1,42 +1,40 @@
-# Demostración de Detección de Fraude con MLOps
+# Fraud Detection Demonstration with MLOps
 
-Esta demostración presenta una solución para la prevención de fraudes financieros utilizando el feature store de MLRun para definir características complejas que ayudan a identificar actividades fraudulentas. La prevención de fraudes es un desafío particular, ya que requiere procesar transacciones y eventos en tiempo real, respondiendo rápidamente para bloquear transacciones antes de que se completen.
+This demonstration presents a solution for financial fraud prevention using MLRun’s feature store to define complex features that help identify fraudulent activities. Fraud prevention is a challenging task as it requires processing transactions and events in real time, responding quickly to block transactions before they are completed.
 
-## Enfoque de la solución
+## Solution Approach
 
-Para abordar este problema, se implementan dos pipelines:
+To address this problem, two pipelines are implemented:
 
--   Pipeline de desarrollo: Permite probar y ajustar la lógica de ingeniería de características y modelos.
+- **Development Pipeline**: Allows testing and fine-tuning feature engineering logic and models.
+- **Production Pipeline**: Uses the same features and models but is adapted to handle real-time data.
 
--   Pipeline de producción: Utiliza las mismas características y modelos, pero se adapta para manejar datos en tiempo real.
-
-Además, se automatiza el monitoreo de datos y modelos, permitiendo detectar desviaciones (drift) y activar el reentrenamiento de modelos dentro de un pipeline CI/CD. El proceso completo se describe en el siguiente diagrama:
+Additionally, data and model monitoring is automated, enabling the detection of deviations (drift) and triggering model retraining within a CI/CD pipeline. The complete process is illustrated in the following diagram:
 
 ![Feature store demo diagram - fraud prevention](./diagram.png)
 
-## Pasos de implementación del proyecto
+## Project Implementation Steps
 
-### Exploración y análisis de datos (EDA):
+### Data Exploration and Analysis (EDA):
 
-Comprender las características de los datos y su estructura.
+Understand the characteristics and structure of the data.
 
-### Construcción del pipeline de ingesta y preparación de datos:
+### Construction of the Data Ingestion and Preparation Pipeline:
 
-Preprocesar y transformar datos para su uso en modelos.
+Preprocess and transform data for use in models.
 
-### Desarrollo del pipeline de entrenamiento y validación de modelos:
+### Development of the Model Training and Validation Pipeline:
 
-Entrenar modelos con diferentes características y algoritmos.
+Train models using different features and algorithms.
 
-### Desarrollo del pipeline de servicio de la aplicación:
+### Development of the Application Service Pipeline:
 
-Interceptar solicitudes, procesar datos en tiempo real y realizar inferencias.
+Intercept requests, process real-time data, and make inferences.
 
-### Monitoreo de datos y modelos:
+### Data and Model Monitoring:
 
-Detectar desviaciones (drift) y evaluar el rendimiento de los modelos en producción.
+Detect deviations (drift) and evaluate model performance in production.
 
-### Gestión de operaciones continuas y CI/CD:
+### Continuous Operations and CI/CD Management:
 
-Automatizar la integración y el despliegue continuo para mantener los modelos actualizados.
-Preparación de los datos
+Automate continuous integration and deployment to keep models up to date.
